@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Страница авторизации</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Авторизация</h1>
+    </div>
+
+    <form class="form_auth_style">
+      <span>Введите логин</span>
+      <div class="content">
+        <br /><input
+          name="username"
+          type="email"
+          id="auth_email"
+          placeholder="Введите Ваш e-mail"
+          pattern="^(([a-zа-я0-9_-]+\.)*[a-zа-я0-9_-]+@[a-zа-я0-9-]+(\.[a-zа-я0-9-]+)*\.[a-zа-я]{2,6})?$"
+          class="input username"
+          title="Введите ваш e-mail"
+          required
+        />
+      </div>
+      <div class="header"><br /><span>Введите пароль </span></div>
+      <div class="content">
+        <br /><input
+          type="password"
+          name="password"
+          placeholder="Введите пароль(лат буквы и/или цифры)"
+          pattern="[A-Za-z0-9]+"
+          minlength="6"
+          maxlength="20"
+          title="Введите латинские буквы"
+          required
+        />
+      </div>
+
+      <div class="footer">
+        <input type="submit" name="submit" value="ВОЙТИ" class="button" />
+      </div>
+    </form>
+  </body>
+</html>
