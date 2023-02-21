@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Страница авторизации</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
-  <body>
-    <div class="header">
-      <h1>Авторизация</h1>
-    </div>
 
-    <form class="form_auth_style">
-      <span>Введите логин</span>
-      <div class="content">
-        <br /><input
-          name="username"
-          type="email"
-          id="auth_email"
-          placeholder="Введите Ваш e-mail"
-          pattern="^(([a-zа-я0-9_-]+\.)*[a-zа-я0-9_-]+@[a-zа-я0-9-]+(\.[a-zа-я0-9-]+)*\.[a-zа-я]{2,6})?$"
-          class="input username"
-          title="Введите ваш e-mail"
-          required
-        />
-      </div>
-      <div class="header"><br /><span>Введите пароль </span></div>
-      <div class="content">
-        <br /><input
-          type="password"
-          name="password"
-          placeholder="Введите пароль(лат буквы и/или цифры)"
-          pattern="[A-Za-z0-9]+"
-          minlength="6"
-          maxlength="20"
-          title="латинские буквы и/или цифры"
-          required
-        />
-      </div>
+<head>
+	<title>Страница авторизации</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script>
+	setInterval(function() {
+		var now = new Date();
+		var clock = document.getElementById("clock");
+		clock.innerHTML = now.toLocaleTimeString();
+	}, 1000);
+	</script>
+</head>
 
-      <div class="footer">
-        <input type="submit" name="submit" value="ВОЙТИ" class="button" />
-      </div>
-    </form>
-  </body>
+<body>
+	<div class="header">
+		<h1>Авторизация</h1> </div>
+	<form class="form_auth_style"> <span>Введите логин</span>
+		<div class="content">
+			<br />
+			<input name="username" type="email" id="auth_email" placeholder="Введите Ваш e-mail" pattern="^(([a-zа-я0-9_-]+\.)*[a-zа-я0-9_-]+@[a-zа-я0-9-]+(\.[a-zа-я0-9-]+)*\.[a-zа-я]{2,6})?$" class="input username" title="Введите ваш e-mail" required /> </div>
+		<div class="header">
+			<br /><span>Введите пароль </span></div>
+		<div class="content">
+			<br />
+			<input type="password" name="password" placeholder="Введите пароль(лат буквы,цифры,спец.символы)" pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\W+)(?![.\n]).{6,20}" {minlength="6" maxlength="20" } title="Введите латинские буквы разных регистров, цифры и спец.символы" required /> </div>
+		<div class="header">
+			<br /><span>Введите номер телефона </span></div>
+		<div class="content">
+			<br />
+			<input type="number telephone" name="number telephone" placeholder="Введите номер телефона" pattern="^(\+7|7|8)+((\(\d{3}\)\d{7})|(\d{10}))$" {minlength="11" maxlength="14" } required /> </div>
+		<div class="footer">
+			<input type="submit" name="submit" value="ВОЙТИ" class="button" /> </div>
+		<script language="javascript" type="text/javascript">
+		<!--
+		var d = new Date();
+		var day = new Array("Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота");
+		var month = new Array("января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря");
+		document.write(day[d.getDay()] + " " + d.getDate() + " " + month[d.getMonth()] + " " + d.getFullYear() + " г.");
+		//-->
+		</script>
+                <br><iframe src="http://arbuzova.mooseum.ru/1-rubrika/13-demo/clock-02.html" width="260" height="280" text-align: center
+                marginheight=0 marginwidth=0 scrolling="no" style="border:none;">
+                </iframe>
+		<script>
+		function isInternetExplorer() {
+			return window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigator.userAgent.indexOf('Trident/') > -1;
+		}
+		console.log(isInternetExplorer());
+		if(isInternetExplorer() === false) {} else {
+			alert('Сочувствую, но ваш браузер IE');
+		}
+		</script>
+	</form>
+</body>
+
 </html>
+
